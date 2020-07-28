@@ -2,14 +2,28 @@ import React, {Component} from 'react'
 
 class PersonCard extends Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.state= {
+            birthday: parseInt(this.props.age)
+        };
+    }
     render(){
+        const {firstName, lastName, hairColor}= this.props
+        const birthday=() =>
+        {
+            this.setState({birthday:this.state.birthday+1})
+        }
         return(
-            <div>
-                <h1>{this.props.lastName}, {this.props.firstName}</h1>
-                <p>Age: {this.props.age}</p>
-                <p>Hair Color: {this.props.hairColor}</p>
-            </div>
             
+            <div>
+                <h1>{lastName}, {firstName}</h1>
+                <p>Age: {this.state.birthday}</p>
+                <p>Hair Color: {hairColor}</p>
+                <button onClick={birthday}>Birthday Button for {firstName} {lastName}</button> 
+            </div>
+           
         );
     }
 }

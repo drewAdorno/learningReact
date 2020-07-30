@@ -1,0 +1,15 @@
+.container
+{
+    background-color: #563D7C;
+    border-radius: 10px;
+    color:white;
+    width: 571px;
+    margin-top: 20px;
+    padding:20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+h1
+{
+    text-align: center;
+    margin-bottom: 20px;
+}

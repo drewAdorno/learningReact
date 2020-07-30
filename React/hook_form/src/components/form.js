@@ -1,20 +1,13 @@
-import React, { useState} from 'react'
+import React from 'react'
 
-const Form = () => 
+const Form = props => 
 {
-    const [form, setForm]=useState({
-        firstName:'',
-        lastName:'',
-        email:'',
-        password:'',
-        confirmPW:'',
-    })
+    const{form, setForm}= props
     const outputField = (e) =>
     {
         setForm({...form,  [e.target.id]: e.target.value })
     }
     return(
-        <div>
             <form>
                 <h1>My First React Form</h1>
                 <div className="form-group">
@@ -42,14 +35,6 @@ const Form = () =>
                 <input type="password" className="form-control" name="confirmPW" id="confirmPW" onChange={outputField}/>
                 </div>
             </form>
-            <div id="results">
-                <p>First Name: <span className='text-info'>{form.firstName}</span></p>
-                <p>Last Name: <span className='text-info'>{form.lastName}</span></p>
-                <p>Email: <span className='text-info'>{form.email}</span></p>
-                <p>Password: <span className='text-info'>{form.password}</span></p>
-                <p>Confirm PW: <span className='text-info'>{form.confirmPW}</span></p>
-            </div>
-        </div>
     )
 }
 export default Form

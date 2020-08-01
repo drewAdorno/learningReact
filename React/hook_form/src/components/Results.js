@@ -1,15 +1,19 @@
 import React from 'react'
 
-const Results = props => 
+const Results = ({form}) => 
 {
-    const {form}=props
+    const display=(fieldName) => {
+        let newName=''
+        fieldName.split('').map((letter) => (
+            letter === letter.toUpperCase() ? newName+=` ${letter}`:newName +=letter
+        ))
+        return newName.charAt(0).toUpperCase() + newName.slice(1)
+    }
     return(
         <div id="results">
-            <p>First Name: <span className='text-info'>{form.firstName}</span></p>
-            <p>Last Name: <span className='text-info'>{form.lastName}</span></p>
-            <p>Email: <span className='text-info'>{form.email}</span></p>
-            <p>Password: <span className='text-info'>{form.password}</span></p>
-            <p>Confirm PW: <span className='text-info'>{form.confirmPW}</span></p>
+            {Object.keys(form).map((key) => (
+               <p>{display(key)}: <span className='text-info'>{form[key]}</span></p>
+            ))}
         </div>
     )
 }

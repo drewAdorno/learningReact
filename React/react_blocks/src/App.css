@@ -1,0 +1,10 @@
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: gray;
+}
+#main-section{
+    display: flex;
+
+}

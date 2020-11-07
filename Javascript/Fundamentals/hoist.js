@@ -1,102 +1,191 @@
-//1--------------------------------------------
-var hello
-console.log(hello)
-var hello= 'world';
-//Result: undefined is printed to the console
+//1.________________________
+console.log(hello);                                   
+var hello = 'world';
 
-//2--------------------------------------------
-var needle
+//--------------------------
+var hello
+console.log(hello);
+hello='world'
+
+//2.________________________
+
+var needle = 'haystack';
+test();
 function test(){
     var needle = 'magnet';
     console.log(needle);
 }
-var needle='haystack'
-test();
-//Result: magnet is printed to the console
 
-//3--------------------------------------------
-var brendan
+//--------------------------
+
+var needle
+function test(){
+    var needle
+    needle = 'magnet';
+    console.log(needle);
+}
+needle = 'haystack'
+test();
+
+//3.______________________
+
+var brendan = 'super cool';
 function print(){
-    brendan='only okay'
+    brendan = 'only okay';
     console.log(brendan);
 }
-var brendan='super cool';
 console.log(brendan);
-//Result: console logs super cool
 
-//4--------------------------------------------
-var food
-function eat(){
-    var food;
-    food='half-chicken';
-    console.log(food);
-    var food='gone'
+//--------------------------
+
+var brendan
+function print(){
+    var brendan
+    brendan = 'only okay';
+    console.log(brendan);
 }
-var food= 'chicken'
+brendan='super cool'
+console.log(brendan);
+
+//4.______________________
+
+var food = 'chicken';
 console.log(food);
 eat();
-//Result: console logs chicken and half-chicken
+function eat(){
+    food = 'half-chicken';
+    console.log(food);
+    var food = 'gone';
+}
 
-//5--------------------------------------------
-var mean
+//--------------------------
+
+var food
+food='chicken'
+function eat(){
+        var food;
+        food = 'half-chicken';
+        console.log(food);
+        food = 'gone';
+}
+console.log(food);
+eat();
+
+//5.______________________
+
 mean();
 console.log(food);
-    var mean = function() {
-        var food;
-        food = "chicken";
-        console.log(food);
-        var food = "fish";
-        console.log(food);
-    }
+var mean = function() {
+    food = "chicken";
+    console.log(food);
+    var food = "fish";
+    console.log(food);
+}
 console.log(food);
-//Result: Error mean is not a function
 
-//6--------------------------------------------
-var genre;
+//--------------------------
+
+var mean
+mean()
+mean = function() {
+    var food
+    food = "chicken";
+    console.log(food);
+    food = "fish";
+    console.log(food);
+}
+console.log(food);
+
+//6.______________________
+console.log(genre);
+var genre = "disco";
+rewind();
 function rewind() {
-    var genre;
-    genre='rock';
+    genre = "rock";
     console.log(genre);
-    var genre= 'r&b'
+    var genre = "r&b";
     console.log(genre);
 }
 console.log(genre);
-var genre='disco'
-rewind()
-console.log(genre);
-//Result: console logs undefined, rock, r&b, and disco
 
-//7--------------------------------------------
+//---------------------------
+var genre
+function rewind() {
+    var genre
+    genre = "rock";
+    console.log(genre);
+    genre = "r&b";
+    console.log(genre);
+}
+console.log(genre);
+genre='disco'
+rewind();
+console.log(genre);
+
+//7.________________________
+
+dojo = "san jose";
+console.log(dojo);
+learn();
 function learn() {
-    var dojo
     dojo = "seattle";
     console.log(dojo);
     var dojo = "burbank";
     console.log(dojo);
 }
-dojo = "san jose";
 console.log(dojo);
-learn();
-console.log(dojo);
-//Result: console logs san jose, seattle, burbank, san jose
 
-//8---------------------------------------------
+//---------------------------
+
+var dojo
+function learn() {
+    var dojo
+    dojo = "seattle";
+    console.log(dojo);
+    dojo = "burbank";
+    console.log(dojo);
+}
+dojo='san jose'
+console.log(dojo);
+learn()
+console.log(dojo);
+
+//8.________________________
+
+console.log(makeDojo("Chicago", 65));
+console.log(makeDojo("Berkeley", 0));
 function makeDojo(name, students){
-    const dojo = {};
-    dojo.name = name;
-    dojo.students = students;
-    if(dojo.students > 50){
-        dojo.hiring = true;
-    }
-    else if(dojo.students <= 0){
-        dojo = "closed for now";
-    }
-    return dojo;
+    const dojo = {};
+    dojo.name = name;
+    dojo.students = students;
+    if(dojo.students > 50){
+        dojo.hiring = true;
+    }
+    else if(dojo.students <= 0){
+        dojo = "closed for now";
+    }
+    return dojo;
+}
+
+//-------------------------------
+function makeDojo(name, students){
+    const dojo = {};
+    dojo.name = name;
+    dojo.students = students;
+    if(dojo.students > 50){
+        dojo.hiring = true;
+    }
+    else if(dojo.students <= 0){
+        dojo = "closed for now";
+    }
+    return dojo;
 }
 console.log(makeDojo("Chicago", 65));
 console.log(makeDojo("Berkeley", 0));
-//Result: {'name': Chicago, 'students':65, 'hiring':true}
-//        TypeError: Assignment to constant variable
+
+
+
+
 
 
 

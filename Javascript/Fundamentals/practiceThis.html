@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">
+        <button id='btn_one'>Click me</button>
+    </div>
+    <div id="two">
+        <button id='btn_two'>Click me</button>
+    </div>
+    
+    <script>
+            document.getElementById('btn_one').onclick=(()=>{
+                console.log(this);
+            })
+
+            document.getElementById('btn_two').onclick=(function(){
+                console.log(this);
+            })
+    </script>
+</body>
+</html>

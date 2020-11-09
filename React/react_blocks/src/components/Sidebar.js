@@ -8,6 +8,7 @@ class Sidebar extends Component{
             height: '400px',
             marginRight:'10px',
         }
+        
         return (
             <div style={thisStyle}></div>
         )

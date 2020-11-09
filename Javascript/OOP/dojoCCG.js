@@ -5,7 +5,7 @@ class Card{
     }
 }
 
-class Unit{
+class Unit extends Card{
     constructor(name, cost, power, res) {
         super(name, cost)
         this.power=power
@@ -18,7 +18,7 @@ class Unit{
     
 }
 
-class Effect{
+class Effect extends Card{
     constructor(name, cost, text, stat, magnitude) {
         super(name, cost)
         this.text=text

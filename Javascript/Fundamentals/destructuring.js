@@ -1,38 +1,38 @@
-// const cars = ['Tesla', 'Mercedes', 'Honda']
-// const [ randomCar ] = cars
-// const [ ,otherRandomCar ] = cars
-//Predict the output
-// console.log(randomCar)
-// console.log(otherRandomCar)
+const cars = ['Tesla', 'Mercedes', 'Honda']
+const [ randomCar ] = cars
+const [ ,otherRandomCar ] = cars
+// Predict the output
+console.log(randomCar)
+console.log(otherRandomCar)
 
 ///////////////////////////////////////////
 // Tesla
 // Mercedes
 
-// const employee = {
-//     name: 'Elon',
-//     age: 47,
-//     company: 'Tesla'
-// }
-// const { name: otherName } = employee;
-//Predict the output
-//console.log(name);
-// console.log(otherName);
+const employee = {
+    name: 'Elon',
+    age: 47,
+    company: 'Tesla'
+}
+const { name: otherName } = employee;
+// Predict the output
+console.log(name);
+console.log(otherName);
 
 ///////////////////////////////////////////
 // Error
-// Elon
 
-// const person = {
-//     name: 'Phil Smith',
-//     age: 47,
-//     height: '6 feet'
-// }
-// const password = '12345';
-// const { password: hashedPassword } = person;  
+
+const person = {
+    name: 'Phil Smith',
+    age: 47,
+    height: '6 feet'
+}
+const password = '12345';
+const { password: hashedPassword } = person;  
 // //Predict the output
-// console.log(password);
-// console.log(hashedPassword);
+console.log(password);
+console.log(hashedPassword);
 
 //12345
 //undefined

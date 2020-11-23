@@ -32,27 +32,14 @@ const DisplayForm= (props) =>{
     return(
         <div style={containerStyle}>
             <h3>Your Form Data</h3>
+            {Object.entries(formState).map(([key, value]) =>(
             <div style={inputInfoStyle}>
-                <b style={labelStyle}>First Name:</b>
-                <p style={pStyle}>{formState.firstName}</p>
+                <b style={labelStyle}>{key}</b>
+                <p style={pStyle}>{value}</p>
             </div>
-            <div style={inputInfoStyle}>
-                <b style={labelStyle}>Last Name:</b>
-                <p style={pStyle}>{formState.lastName}</p>
-            </div>
-            <div style={inputInfoStyle}>
-                <b style={labelStyle}>Email:</b>
-                <p style={pStyle}>{formState.email}</p>
-            </div>
-            <div style={inputInfoStyle}>
-                <b style={labelStyle}>Password:</b>
-                <p style={pStyle}>{formState.password}</p>
-            </div>
-            <div style={inputInfoStyle}>
-                <b style={labelStyle}>Confirm Password:</b>
-                <p style={pStyle}>{formState.confirmPW}</p>
-            </div>
+        ))}
         </div>
+        
     )
 }
 export default DisplayForm;

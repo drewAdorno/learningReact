@@ -10,10 +10,17 @@ function App() {
         password:'',
         confirmPW:'',
     })
+    const [error, setError]=useState({
+        firstName:'',
+        lastName:'',
+        email:'',
+        password:'',
+        confirmPW:'',
+    })
     return (
     <div>
-      <Form formState={formState} setFormState={setFormState}/>
-      <DisplayForm formState={formState}/>
+      <Form formState={formState} setFormState={setFormState} error={error} setError={setError}/>
+      <DisplayForm formState={formState} error={error}/>
     </div>
   )
 }
